@@ -12,21 +12,16 @@ import (
 
 func main () {
 
-	fmt.Println(ultimateTranscriber("testfile2.wav"))
-	
-}
+        uploadUrl := upload("/home/zerocool/speech-to-text-golang-example/testfile2.wav")
+        fmt.Println("upload url: ", uploadUrl)
+        id := transcribe(uploadUrl)
+        fmt.Println("transcript id: ", id)
+        result := poll(id)
 
-func ultimateTranscriber(filename string) {
-
-	uploadUrl := upload(filename)
-	fmt.Println("upload url: ", uploadUrl)
-	id := transcribe(uploadUrl)
-	fmt.Println("transcript id: ", id)
-	result := poll(id)
-	
-	return result
+        fmt.Println(result)
 
 }
+
 //you can tell I stole this part
 func poll(id string) string {
 	const API_KEY = "API KEY HERE"
