@@ -12,18 +12,24 @@ import (
 
 func main () {
 
-	uploadUrl := upload("/home/zerocool/speech-to-text-golang-example/testfile2.wav")
+	fmt.Println(ultimateTranscriber("testfile2.wav"))
+	
+}
+
+func ultimateTranscriber(filename string) {
+
+	uploadUrl := upload(filename)
 	fmt.Println("upload url: ", uploadUrl)
 	id := transcribe(uploadUrl)
 	fmt.Println("transcript id: ", id)
 	result := poll(id)
 	
-	fmt.Println(result)
+	return result
 
 }
 //you can tell I stole this part
 func poll(id string) string {
-	const API_KEY = "b1c742f6ac364fb8a9ea78f888365294"
+	const API_KEY = "API KEY HERE"
 	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
 	client := &http.Client{}
@@ -61,7 +67,7 @@ func poll(id string) string {
 func transcribe(uploadurl string) string {
         //audio url here from upload script
 	AUDIO_URL := uploadurl
-        const API_KEY = "b1c742f6ac364fb8a9ea78f888365294"
+        const API_KEY = "API KEY HERE"
         const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
         // prepare json data
@@ -87,7 +93,7 @@ func transcribe(uploadurl string) string {
 }
 
 func upload(filename string) string {
-        const API_KEY = "b1c742f6ac364fb8a9ea78f888365294"
+        const API_KEY = "API KEY HERE"
         const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
 	//uplaod url is there for the mfing api
         // Load file
