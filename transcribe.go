@@ -10,7 +10,7 @@ import (
 func main() {
 	//audio url here from upload script
 	const AUDIO_URL = "https://cdn.assemblyai.com/upload/69531591-8fc9-4733-adf6-28f6e7ed96b7"
-	const API_KEY = "b1c742f6ac364fb8a9ea78f888365294"
+	const API_KEY = "API KEY HERE"
 	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
 	// prepare json data
