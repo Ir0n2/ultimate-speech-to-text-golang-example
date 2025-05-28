@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	const API_KEY = "b1c742f6ac364fb8a9ea78f888365294"
+	const API_KEY = "API KEY HERE"
 	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 	const POLLING_URL = TRANSCRIPT_URL + "/" + "e88b92e9-c110-4c3d-8546-24c731c29855"
 
