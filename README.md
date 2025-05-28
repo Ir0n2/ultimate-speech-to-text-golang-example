@@ -5,3 +5,5 @@ We use a simple HTTP client with `net/http` and the [AssemblyAI API](https://www
 - Step 1 Upload a file: [upload.go](upload.go)
 - Step 2 Transcribe: [transcribe.go](transcribe.go)
 - Step 3 Poll the result: [poll.go](poll.go)
+
+These steps have been simplified into 3 simple functions. Just add in your api key and you should be good to go!
