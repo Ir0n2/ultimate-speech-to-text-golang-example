@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	const API_KEY = "b1c742f6ac364fb8a9ea78f888365294"
+	const API_KEY = "API KEY HERE"
 	const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
 
 	// Load file
